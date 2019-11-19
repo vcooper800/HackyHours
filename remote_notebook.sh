@@ -10,16 +10,19 @@
 echo "must be logged onto sipn.atmos.uw.edu"
 
 # python-3.6.5-1/
-export PATH=/home/disk/sipn/nicway/anaconda3/pkgs/python-3.6.5-1/bin:/home/disk/sipn/nicway/anaconda3/bin:/home/disk/sipn/nicway/anaconda3/envs/esio/bin/:$PATH
+#VTC# export PATH=/home/disk/sipn/nicway/anaconda3/pkgs/python-3.6.5-1/bin:/home/disk/sipn/nicway/anaconda3/bin:/home/disk/sipn/nicway/anaconda3/envs/esio/bin/:$PATH
 
-export DATA_DIR=/home/disk/sipn/nicway/data
-export LD_LIBRARY_PATH=/home/disk/sipn/nicway/anaconda3/envs/esio/lib/:$LD_LIBRARY_PATH
+# python-myenv
+export PATH=/home/disk/atmos/vcooper/miniconda3/envs/myenv/bin/:$PATH
 
-source activate esio
+#VTC# export DATA_DIR=/home/disk/sipn/nicway/data
+#VTC# export LD_LIBRARY_PATH=/home/disk/sipn/nicway/anaconda3/envs/esio/lib/:$LD_LIBRARY_PATH
 
+#VTC# source activate esio
+source activate myenv
 
-echo $DATA_DIR
-echo `which mpirun`
+#VTC# echo $DATA_DIR
+#VTC# echo `which mpirun`
 jupyter notebook --no-browser --port=9929
 
 
